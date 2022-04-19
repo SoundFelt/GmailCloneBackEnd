@@ -15,7 +15,7 @@ const connection = mysql.createConnection({
     database: 'heroku_0a9b6022d153e93'
 })
 
-app.post('/', (req, res) => {
+app.post('/api', (req, res) => {
     const data = {
         to: req.body.to,
         subject: req.body.subject,
@@ -33,7 +33,7 @@ app.post('/', (req, res) => {
     })
 })
 
-app.get('/', (req, res) => {
+app.get('/api', (req, res) => {
     const query = 'SELECT `to`, subject, message, DATE_FORMAT(time_sent, "%M %D %H:%i") AS "time_sent", clicked, id FROM emails'
 
     connection.query(query, function(err, results) {
@@ -45,7 +45,7 @@ app.get('/', (req, res) => {
     })
 })
 
-app.patch('/', (req, res) => {
+app.patch('/api', (req, res) => {
     const emailId = req.body.id
 
     console.log(emailId)
