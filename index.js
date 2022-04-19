@@ -9,10 +9,10 @@ app.use(cors({ origin: true }));
 
 
 const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: process.env.DB_LOCAL_PASSWORD,
-    database: 'gmailclone'
+    host: 'eu-cdbr-west-02.cleardb.net',
+    user: 'b387195cb48ad4',
+    password: '6b12f8b0',
+    database: 'heroku_0a9b6022d153e93'
 })
 
 app.post('/', (req, res) => {
