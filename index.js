@@ -15,7 +15,7 @@ const connection = mysql.createConnection({
     database: 'heroku_49e8ccb2b0c4f6a'
 })
 
-.app.get('/', (req, res) => {
+app.get('/', (req, res) => {
     res.send('backend live')
 })
 
