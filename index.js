@@ -8,10 +8,10 @@ app.use(express.json());
 app.use(cors({ origin: true }));
 
 const connection = mysql.createPool({
-    host: 'us-cdbr-east-05.cleardb.net',
-    user: 'b6171e546f87c9',
-    password: '3a400cef',
-    database: 'heroku_49e8ccb2b0c4f6a'
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_DATABASE
 })
 
 app.get('/', (req, res) => {
