@@ -9,10 +9,10 @@ app.use(cors({ origin: true }));
 
 
 const connection = mysql.createConnection({
-    host: 'eu-cdbr-west-02.cleardb.net',
-    user: 'b1f0f869ab7c50',
-    password: 'b6b98270',
-    database: 'heroku_280a70560985c43'
+    host: 'us-cdbr-east-05.cleardb.net',
+    user: 'b6171e546f87c9',
+    password: '3a400cef',
+    database: 'heroku_49e8ccb2b0c4f6a'
 })
 
 .app.get('/', (req, res) => {
