@@ -10,9 +10,13 @@ app.use(cors({ origin: true }));
 
 const connection = mysql.createConnection({
     host: 'eu-cdbr-west-02.cleardb.net',
-    user: 'b387195cb48ad4',
-    password: '6b12f8b0',
-    database: 'heroku_0a9b6022d153e93'
+    user: 'b1f0f869ab7c50',
+    password: 'b6b98270',
+    database: 'heroku_280a70560985c43'
+})
+
+.app.get('/', (req, res) => {
+    res.send('backend live')
 })
 
 app.post('/api', (req, res) => {
